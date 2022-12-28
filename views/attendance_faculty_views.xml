@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_faculty_tree_view" model="ir.ui.view">
+            <field name="name">faculty_tree_view</field>
+            <field name="model">attendance.faculty</field>
+            <field name="arch" type="xml">
+                <tree expand="1" string="Facluty">
+                    <field name="name" />
+                    <field name="email" />
+                    <field name="subject" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="attendance_faculty_form_view" model="ir.ui.view">
+            <field name="name">facluty_form_view</field>
+            <field name="model">attendance.faculty</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <label for="name">Name</label>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group>
+                                <field name="subject" widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                <field name="email"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Department">
+                                <group>
+                                    <field name="department_name"></field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
+        

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_department_tree_view" model="ir.ui.view">
+            <field name="name">department_tree_view</field>
+            <field name="model">attendance.department</field>
+            <field name="arch" type="xml">
+                <tree expand="1" string="Department">
+                    <field name="name" />
+                    <!-- <field name="course" /> -->
+                </tree>
+            </field>
+        </record>
+
+        <record id="attendance_department_form_view" model="ir.ui.view">
+            <field name="name">department_form_view</field>
+            <field name="model">attendance.department</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <label for="name">Name</label>
+                        <h1><field name="name"/></h1>
+                        <!-- <notebook>
+                            <page string="Courses">
+                                <group>
+                                    <field name="course"></field>
+                                </group>
+                            </page>
+                        </notebook> -->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

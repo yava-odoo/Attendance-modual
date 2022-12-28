@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="attendance_root_menu" name="Attendance">
+            <menuitem id="attendance_student_root_menu" name="Student">
+                <menuitem id="attendance_student_sub_menu" action="attendance_student_action" />
+            </menuitem>
+            <menuitem id="attendance_subject_root_menu" name="Other Info.">
+                <menuitem id="attendance_subject_sub_menu" action="attendance_subject_action" />
+                <menuitem id="attendance_faculty_sub_menu" action="attendance_faculty_action" />
+                <menuitem id="attendance_department_sub_menu" action="attendance_department_action" />
+                <menuitem id="attendance_course_sub_menu" action="attendance_student_course_action" />
+            </menuitem>
+        </menuitem>
+    </data>
+</odoo>

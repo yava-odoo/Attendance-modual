@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_subject_tree_view" model="ir.ui.view">
+            <field name="name">attendance_subject_tree_view</field>
+            <field name="model">attendance.subject</field>
+            <field name="arch" type="xml">
+                <tree expand="1" string="Subject">
+                    <field name="name"/>
+                    <field name="faculty" />
+                    <field name="semester" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="attndance_subject_form_view" model="ir.ui.view">
+            <field name="name">attendance_subject_form_view</field>
+            <field name="model">attendance.subject</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <label for="name">Name</label>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group>
+                                <field name="course" widget="many2many_tags"/>
+                                <field name="faculty"/>
+                            </group>
+                            <group>
+                                <field name="semester"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Department">
+                                <group>
+                                    <field name="department_name" widget="many2many_tags"></field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="attendance_subject_search_view" model="ir.ui.view">
+            <field name="name">subject Search</field>
+            <field name="model">attendance.subject</field>
+            <field name="arch" type="xml">
+                <search string="Student Search">
+                    <field name="name" />    
+                    <field name="semester" /> 
+                    <field name="faculty" />
+                    <field name="department_name"/>
+                    <filter string="Archived" name="active" domain="[('active', '=', False)]" />
+                    <group string="Department">
+                        <filter name="year" string="Year" context="{'group_by':'year'}" />
+                        <separator/>
+                        <filter name="semester" string="Semester" context="{'group_by':'semester'}" />
+                        <separator/>
+                        <filter name="department_name" string="Department" context="{'group_by':'department_name'}" />
+                        <separator/>
+                        <filter string="Subject" name="subject" context="{'group_by':'subject'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>
+        

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_student_action" model="ir.actions.act_window">
+            <field name="name">Attendance</field>
+            <field name="res_model">attendance.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="attendance_subject_action" model="ir.actions.act_window">
+            <field name="name">Subjects</field>
+            <field name="res_model">attendance.subject</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="attendance_faculty_action" model="ir.actions.act_window">
+            <field name="name">Faculty</field>
+            <field name="res_model">attendance.faculty</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="attendance_department_action" model="ir.actions.act_window">
+            <field name="name">Department</field>
+            <field name="res_model">attendance.department</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="attendance_student_course_action" model="ir.actions.act_window">
+            <field name="name">Student Course</field>
+            <field name="res_model">attendance.course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
