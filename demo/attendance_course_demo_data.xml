@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_course_demo_data_1" model="attendance.course">
+            <field name="name">CSE</field>
+        </record>
+        <record id="attendance_course_demo_data_2" model="attendance.course">
+            <field name="name">CE</field>
+        </record>
+        <record id="attendance_course_demo_data_3" model="attendance.course">
+            <field name="name">IT</field>
+        </record>
+        <record id="attendance_course_demo_data_4" model="attendance.course">
+            <field name="name">CIVIL</field>
+        </record>
+        <record id="attendance_course_demo_data_5" model="attendance.course">
+            <field name="name">EC</field>
+        </record>
+        <record id="attendance_course_demo_data_6" model="attendance.course">
+            <field name="name">EE</field>
+        </record>
+        <record id="attendance_course_demo_data_7" model="attendance.course">
+            <field name="name">NURSING</field>
+        </record>
+    </data>
+</odoo>
+        

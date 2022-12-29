@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_subject_demo_data_1" model="attendance.subject">
+            <field name="name">DSA</field>
+            <field name="semester">2</field>
+        </record>
+        <record id="attendance_subject_demo_data_2" model="attendance.subject">
+            <field name="name">DAA</field>
+            <field name="semester">3</field>
+        </record>
+        <record id="attendance_subject_demo_data_3" model="attendance.subject">
+            <field name="name">DLP</field>
+            <field name="semester">7</field>
+        </record>
+        <record id="attendance_subject_demo_data_4" model="attendance.subject">
+            <field name="name">IPCV</field>
+            <field name="semester">7</field>
+        </record>
+        <record id="attendance_subject_demo_data_5" model="attendance.subject">
+            <field name="name">Blockchain</field>
+            <field name="semester">6</field>
+        </record>
+        <record id="attendance_subject_demo_data_6" model="attendance.subject">
+            <field name="name">DBMS</field>
+            <field name="semester">4</field>
+        </record>
+    </data>
+</odoo>

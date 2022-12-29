@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_department_demo_data_1" model="attendance.department">
+            <field name="name">DEPSTAR</field>
+        </record>
+        <record id="attendance_department_demo_data_2" model="attendance.department">
+            <field name="name">CSPIT</field>
+        </record>
+        <record id="attendance_department_demo_data_3" model="attendance.department">
+            <field name="name">CMPICA</field>
+        </record>
+        <record id="attendance_department_demo_data_4" model="attendance.department">
+            <field name="name">RPCP</field>
+        </record>
+    </data>
+</odoo>
+        

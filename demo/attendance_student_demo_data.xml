@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="attendance_demo_data_1" model="attendance.student">
+            <field name="name">Nil Patel</field>
+            <field name="student_id">19DCS150</field>
+            <field name="email">19dcs150@chausat.edu.in</field>
+            <field name="year">4</field>
+            <field name="semester">7</field>
+        </record>
+        <record id="attendance_demo_data_2" model="attendance.student">
+            <field name="name">Kishan</field>
+            <field name="student_id">19DCS122</field>
+            <field name="email">19dcs122@chausat.edu.in</field>
+            <field name="year">3</field>
+            <field name="semester">5</field>
+        </record>
+        <record id="attendance_demo_data_3" model="attendance.student">
+            <field name="name">Nevil</field>
+            <field name="student_id">19DCS123</field>
+            <field name="email">19dcs123@chausat.edu.in</field>
+            <field name="year">1</field>
+            <field name="semester">1</field>
+        </record>
+        <record id="attendance_demo_data_4" model="attendance.student">
+            <field name="name">Rutvil</field>
+            <field name="student_id">19DCS111</field>
+            <field name="email">19dcs111@chausat.edu.in</field>
+            <field name="year">2</field>
+            <field name="semester">4</field>
+        </record>
+    </data>
+</odoo>
+        

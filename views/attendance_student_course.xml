@@ -11,7 +11,7 @@
             </field>
         </record>
 
-        <record id="attendance_department_form_view" model="ir.ui.view">
+        <record id="attendance_course_form_view" model="ir.ui.view">
             <field name="name">department_form_view</field>
             <field name="model">attendance.course</field>
             <field name="arch" type="xml">

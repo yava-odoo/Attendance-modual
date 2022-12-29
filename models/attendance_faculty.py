@@ -10,3 +10,5 @@ class FaclutyInfo(models.Model):
     email = fields.Char("Email")
     subject = fields.Many2many('attendance.subject',string="Subject")
     department_name = fields.Many2one("attendance.department" ,string="Department")
+    active = fields.Boolean(default=True)
+    course = fields.Many2many("attendance.course", string="Course")

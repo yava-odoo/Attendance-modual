@@ -9,7 +9,7 @@ class StudentInfo(models.Model):
     name = fields.Char("Name",required = True)
     student_id = fields.Char("Student Id",required = True)
     email = fields.Char("Email")
-    course = fields.Many2many("attendance.course", string="Student Course")
+    course = fields.Many2one("attendance.course", string="Student Course")
     year  = fields.Integer("Year")
     semester = fields.Integer("Semester")
     date = fields.Date("Date",default=fields.Datetime.now())

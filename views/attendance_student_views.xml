@@ -31,7 +31,7 @@
                         </h1>
                         <group>
                             <group>
-                                <field name="course" widget="many2many_tags"/>
+                                <field name="course"/>
                                 <field name="student_id" />
                                 <field name="year" />    
                                 <field name="semester" />  
@@ -40,7 +40,7 @@
                                 <field name="date" />
                                 <field name="subject" />
                                 <field name="faculty" />
-                                <field name="email" />    
+                                <field name="email" widget="email"/>    
                             </group>
                         </group>
                         <notebook>
@@ -69,6 +69,9 @@
                     <filter name="date" string="Current Date"
                         domain="[('date','=',datetime.datetime.now())]" />
                     <separator/>
+                    <!-- <filter name="state" string="Done"
+                        domain="[('state','=',done)]" />
+                    <separator/> -->
                     <filter string="Archived" name="active" domain="[('active', '=', False)]" />
                     <group string="Department">
                         <filter name="year" string="Year" context="{'group_by':'year'}" />

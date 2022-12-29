@@ -8,6 +8,6 @@ class SubjectInfo(models.Model):
 
     name = fields.Char(required = True)
     semester = fields.Integer("Semester")
-    faculty = fields.Many2one("attendance.faculty" ,string="Faculty")
+    faculty = fields.Many2many("attendance.faculty" ,string="Faculty")
     department_name = fields.Many2many("attendance.department" ,string="Department")
-    course = fields.Many2many("attendance.course", string="Student Course")
+    active = fields.Boolean(default=True)

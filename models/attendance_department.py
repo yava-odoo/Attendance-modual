@@ -7,4 +7,6 @@ class DepartmentInfo(models.Model):
     _description = "All informations about is here."
 
     name = fields.Char(required = True)
-    # course = fields.Many2many("attendance.course", string="Student Course")
+    active = fields.Boolean(default=True)
+    # subject_ids = fields.One2many('attendance.subject','department_name',string="Subjects")
+    # course_ids = fields.One2many("attendance.course", 'department_id',string="Student Course")
