@@ -8,5 +8,4 @@ class DepartmentInfo(models.Model):
 
     name = fields.Char(required = True)
     active = fields.Boolean(default=True)
-    # subject_ids = fields.One2many('attendance.subject','department_name',string="Subjects")
-    # course_ids = fields.One2many("attendance.course", 'department_id',string="Student Course")
+    color = fields.Integer(string='Color Index')

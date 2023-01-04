@@ -8,4 +8,4 @@ class StudentCourseInfo(models.Model):
 
     name = fields.Char(required = True)
     active = fields.Boolean(default=True)
-    # department_id = fields.Many2one('attendance.department' ,string="Department Id")
+    color = fields.Integer(string='Color Index')

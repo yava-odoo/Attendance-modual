@@ -18,6 +18,9 @@
                 <form name="department form">
                     <sheet>
                         <h1><field name="name"/></h1>
+                        <group>
+                            <!-- <field name="color" widget="color_picker"/> -->
+                        </group>
                     </sheet>
                 </form>
             </field>

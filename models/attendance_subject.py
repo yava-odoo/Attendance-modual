@@ -11,3 +11,4 @@ class SubjectInfo(models.Model):
     faculty = fields.Many2many("attendance.faculty" ,string="Faculty")
     department_name = fields.Many2many("attendance.department" ,string="Department")
     active = fields.Boolean(default=True)
+    color = fields.Integer(string='Color Index')
