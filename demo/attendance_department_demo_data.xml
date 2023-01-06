@@ -3,15 +3,19 @@
     <data>
         <record id="attendance_department_demo_data_1" model="attendance.department">
             <field name="name">DEPSTAR</field>
+            <field name="color">1</field>
         </record>
         <record id="attendance_department_demo_data_2" model="attendance.department">
             <field name="name">CSPIT</field>
+            <field name="color">4</field>
         </record>
         <record id="attendance_department_demo_data_3" model="attendance.department">
             <field name="name">CMPICA</field>
+            <field name="color">2</field>
         </record>
         <record id="attendance_department_demo_data_4" model="attendance.department">
             <field name="name">RPCP</field>
+            <field name="color">6</field>
         </record>
     </data>
 </odoo>

@@ -7,6 +7,7 @@
             <field name="arch" type="xml">
                 <tree expand="1" string="Department">
                     <field name="name" />
+                    <field name="color" widget="color_picker"/>
                 </tree>
             </field>
         </record>
@@ -17,9 +18,16 @@
             <field name="arch" type="xml">
                 <form name="department form">
                     <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="get_department_student" type="object" class="oe_stat_button"
+                                icon="fa-users" string="Students">
+                                <field name="student_count" widget="statinfo"
+                                string="Students"/>
+                            </button>
+                        </div>
                         <h1><field name="name"/></h1>
                         <group>
-                            <!-- <field name="color" widget="color_picker"/> -->
+                            <field name="color" widget="color_picker"/>
                         </group>
                     </sheet>
                 </form>

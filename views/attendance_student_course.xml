@@ -5,8 +5,9 @@
             <field name="name">department_tree_view</field>
             <field name="model">attendance.course</field>
             <field name="arch" type="xml">
-                <tree expand="1" string="Department">
+                <tree expand="1" string="Department" editable="bottom">
                     <field name="name" />
+                    <field name="color" widget="color_picker"/>
                 </tree>
             </field>
         </record>
@@ -20,7 +21,7 @@
                         <label for="name">Name</label>
                         <h1><field name="name"/></h1>
                         <group>
-                            <!-- <field name="color" widget="color_picker"/> -->
+                            <field name="color" widget="color_picker"/>
                         </group>
                     </sheet>
                 </form>

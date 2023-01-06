@@ -5,6 +5,7 @@
     'version': '1.0',
     'author': "yava",
     'description': "Attendace is now easy by using this modual",
+    'depends':['mail'],
     'data': [
         'security/ir.model.access.csv',
         'data/attendance_student_data.xml',

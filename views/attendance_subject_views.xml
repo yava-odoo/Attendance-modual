@@ -6,9 +6,9 @@
             <field name="model">attendance.subject</field>
             <field name="arch" type="xml">
                 <tree expand="1" string="Subject">
-                    <field name="name"/>
+                    <field name="name" />
                     <field name="faculty" />
-                    <field name="semester" />   
+                    <field name="semester" />
                 </tree>
             </field>
         </record>
@@ -19,28 +19,43 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="get_student" type="object" class="oe_stat_button"
+                                icon="fa-users" string="Students">
+                                <field name="student_count" widget="statinfo"
+                                string="Students"/>
+                            </button>
+                        </div>
                         <label for="name">Name</label>
-                        <h1><field name="name"/></h1>
+                        <h1>
+                            <field name="name" />
+                        </h1>
                         <group>
                             <group>
-                                <field name="department_name" widget="many2many_tags" options="{'color_field': 'color'}"></field>
+                                <field name="department_name" widget="many2many_tags"
+                                    options="{'color_field': 'color','no_edit_color': True}"></field>
                             </group>
                             <group>
-                                <field name="semester"/>
+                                <field name="semester" />
                                 <!-- <field name="color" widget="color_picker"/> -->
                             </group>
                         </group>
                         <notebook>
                             <page string="Faculty">
-                                    <field name="faculty">
-                                        <tree>
-                                            <field name="name"></field>
-                                            <field name="email" widget="email"></field>
-                                        </tree>
-                                    </field>
+                                <field name="faculty">
+                                    <tree>
+                                        <field name="name"></field>
+                                        <field name="email" widget="email"></field>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" />
+                        <field name="message_ids" />
+                        <field name="activity_ids" />
+                    </div>
                 </form>
             </field>
         </record>
@@ -50,15 +65,16 @@
             <field name="model">attendance.subject</field>
             <field name="arch" type="xml">
                 <search string="Student Search">
-                    <field name="name" />    
-                    <field name="semester" /> 
+                    <field name="name" />
+                    <field name="semester" />
                     <field name="faculty" />
-                    <field name="department_name"/>
+                    <field name="department_name" />
                     <filter string="Archived" name="active" domain="[('active', '=', False)]" />
                     <group string="Department">
                         <filter name="semester" string="Semester" context="{'group_by':'semester'}" />
-                        <separator/>
-                        <filter name="department_name" string="Department" context="{'group_by':'department_name'}" />  
+                        <separator />
+                        <filter name="department_name" string="Department"
+                            context="{'group_by':'department_name'}" />
                     </group>
                 </search>
             </field>
