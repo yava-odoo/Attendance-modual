@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from odoo import models, fields,api
 
 class FaclutyInfo(models.Model):
     _name = "attendance.faculty"
@@ -9,7 +9,8 @@ class FaclutyInfo(models.Model):
 
     name = fields.Char(required = True)
     email = fields.Char("Email")
-    subject = fields.Many2many('attendance.subject',string="Subject",tracking=True)
-    department_name = fields.Many2one("attendance.department" ,string="Department",tracking=True)
+    subject_ids = fields.Many2many('attendance.subject',string="Subject",tracking=True)
+    department_name_id = fields.Many2one("attendance.department" ,string="Department",tracking=True)
     active = fields.Boolean(default=True)
-    course = fields.Many2many("attendance.course", string="Course")
+    course_ids = fields.Many2many("attendance.course", string="Course")
+    student_ids = fields.One2many('attendance.student','faculty_id',string="Students")

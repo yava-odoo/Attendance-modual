@@ -7,8 +7,8 @@
             <field name="arch" type="xml">
                 <tree expand="1" string="Subject">
                     <field name="name" />
-                    <field name="faculty" />
                     <field name="semester" />
+                    <field name="student_count" />
                 </tree>
             </field>
         </record>
@@ -32,7 +32,7 @@
                         </h1>
                         <group>
                             <group>
-                                <field name="department_name" widget="many2many_tags"
+                                <field name="department_name_ids" widget="many2many_tags"
                                     options="{'color_field': 'color','no_edit_color': True}"></field>
                             </group>
                             <group>
@@ -42,8 +42,8 @@
                         </group>
                         <notebook>
                             <page string="Faculty">
-                                <field name="faculty">
-                                    <tree>
+                                <field name="faculty_ids">
+                                    <tree editable="bottom">
                                         <field name="name"></field>
                                         <field name="email" widget="email"></field>
                                     </tree>
@@ -67,14 +67,14 @@
                 <search string="Student Search">
                     <field name="name" />
                     <field name="semester" />
-                    <field name="faculty" />
-                    <field name="department_name" />
+                    <field name="faculty_ids" />
+                    <field name="department_name_ids" />
                     <filter string="Archived" name="active" domain="[('active', '=', False)]" />
                     <group string="Department">
                         <filter name="semester" string="Semester" context="{'group_by':'semester'}" />
                         <separator />
-                        <filter name="department_name" string="Department"
-                            context="{'group_by':'department_name'}" />
+                        <filter name="department_name_ids" string="Department"
+                            context="{'group_by':'department_name_ids'}" />
                     </group>
                 </search>
             </field>

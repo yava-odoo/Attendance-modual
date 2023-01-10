@@ -9,7 +9,7 @@ class DepartmentInfo(models.Model):
     name = fields.Char(required = True)
     active = fields.Boolean(default=True)
     color = fields.Integer(string='Color Index')
-    student_ids = fields.One2many('attendance.student','department_name',string="Students")
+    student_ids = fields.One2many('attendance.student','department_name_id',string="Students")
     student_count = fields.Integer(compute = 'get_student',string="Student Count")
 
 
@@ -23,6 +23,6 @@ class DepartmentInfo(models.Model):
             'name': 'Students',
             'view_mode': 'tree,form',
             'res_model': 'attendance.student',
-            'domain': [('department_name', '=', self.id)],
+            'domain': [('department_name_id', '=', self.id)],
         }
 
