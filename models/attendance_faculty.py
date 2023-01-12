@@ -9,7 +9,7 @@ class FaclutyInfo(models.Model):
 
     name = fields.Char(required = True)
     email = fields.Char("Email")
-    subject_ids = fields.Many2many('attendance.subject',string="Subject",tracking=True)
+    subject_id = fields.Many2one('attendance.subject',string="Subject",tracking=True)
     department_name_id = fields.Many2one("attendance.department" ,string="Department",tracking=True)
     active = fields.Boolean(default=True)
     course_ids = fields.Many2many("attendance.course", string="Course")

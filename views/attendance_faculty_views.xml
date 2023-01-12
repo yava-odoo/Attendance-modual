@@ -7,8 +7,9 @@
             <field name="arch" type="xml">
                 <tree expand="1" string="Facluty">
                     <field name="name" />
+                    <field name="subject_id" />
+                    <field name="course_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                     <field name="email" />
-                    <field name="subject_ids" />
                 </tree>
             </field>
         </record>
@@ -23,7 +24,7 @@
                         <h1><field name="name"/></h1>
                         <group>
                             <group>
-                                <field name="subject_ids" widget="many2many_tags" options="{'color_field': 'color','no_edit_color': True}"/>
+                                <field name="subject_id"/>
                             </group>
                             <group>
                                 <field name="course_ids" widget="many2many_tags" options="{'color_field': 'color','no_edit_color': True}"/>
@@ -47,6 +48,30 @@
                         <field name="activity_ids" />
                     </div>
                 </form>
+            </field>
+        </record>
+        <record id="attendance_facluty_search_view" model="ir.ui.view">
+            <field name="name">Faculty Search</field>
+            <field name="model">attendance.faculty</field>
+            <field name="arch" type="xml">
+                <search string="Student Search">
+                    <field name="name" />
+                    <field name="email" />
+                    <field name="subject_id" />
+                    <field name="course_ids" />
+                    <field name="department_name_id" />
+                    <filter string="Archived" name="active" domain="[('active', '=', False)]" />
+                    <group string="Department">
+                        <filter name="department_name_id" string="Department"
+                            context="{'group_by':'department_name_id'}" />
+                        <separator />
+                        <filter name="subject_id" string="Subject"
+                            context="{'group_by':'subject_id'}" />
+                        <separator />
+                        <filter name="course_ids" string="Course"
+                            context="{'group_by':'course_ids'}" />
+                    </group>
+                </search>
             </field>
         </record>
     </data>

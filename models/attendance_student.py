@@ -26,7 +26,7 @@ class StudentInfo(models.Model):
         for rec in self:
             temp = rec.year
             if (temp*2) != rec.semester and (temp*2)-1 != rec.semester:
-                raise ValidationError('f')
+                raise ValidationError('Enter Valid Year Or Semester')
 
     @api.depends('state')
     def done_action(self):

@@ -4,26 +4,37 @@
         <record id="attendance_subject_demo_data_1" model="attendance.subject">
             <field name="name">DSA</field>
             <field name="semester">2</field>
+            <field name="department_name_ids" eval="[(6,0,[ref('attendance.attendance_department_demo_data_1')])]" />
         </record>
         <record id="attendance_subject_demo_data_2" model="attendance.subject">
             <field name="name">DAA</field>
             <field name="semester">3</field>
+            <field name="color">4</field>
+            <field name="department_name_ids" eval="[(6,0,[ref('attendance.attendance_department_demo_data_3')])]" />
         </record>
         <record id="attendance_subject_demo_data_3" model="attendance.subject">
             <field name="name">DLP</field>
             <field name="semester">7</field>
+            <field name="color">7</field>
+            <field name="department_name_ids" eval="[(6,0,[ref('attendance.attendance_department_demo_data_2')])]" />
         </record>
         <record id="attendance_subject_demo_data_4" model="attendance.subject">
             <field name="name">IPCV</field>
             <field name="semester">7</field>
+            <field name="color">1</field>
+            <field name="department_name_ids" eval="[(6,0,[ref('attendance.attendance_department_demo_data_1')])]" />
         </record>
         <record id="attendance_subject_demo_data_5" model="attendance.subject">
             <field name="name">Blockchain</field>
             <field name="semester">6</field>
+            <field name="color">9</field>
+            <field name="department_name_ids" eval="[(6,0,[ref('attendance.attendance_department_demo_data_4')])]" />
         </record>
         <record id="attendance_subject_demo_data_6" model="attendance.subject">
             <field name="name">DBMS</field>
             <field name="semester">4</field>
+            <field name="color">10</field>
+            <field name="department_name_ids" eval="[(6,0,[ref('attendance.attendance_department_demo_data_1')])]" />
         </record>
     </data>
 </odoo>

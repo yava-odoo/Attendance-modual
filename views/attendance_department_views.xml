@@ -5,7 +5,7 @@
             <field name="name">department_tree_view</field>
             <field name="model">attendance.department</field>
             <field name="arch" type="xml">
-                <tree expand="1" string="Department" editable="bottom">
+                <tree expand="1" string="Department">
                     <field name="name" />
                     <field name="student_count"/>
                     <field name="color" widget="color_picker"/>

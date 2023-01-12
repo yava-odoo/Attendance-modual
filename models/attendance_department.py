@@ -19,7 +19,7 @@ class DepartmentInfo(models.Model):
 
     def get_department_student(self):
         return {
-           'type': 'ir.actions.act_window',
+            'type': 'ir.actions.act_window',
             'name': 'Students',
             'view_mode': 'tree,form',
             'res_model': 'attendance.student',

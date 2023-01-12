@@ -8,6 +8,7 @@
                 <tree expand="1" string="Subject">
                     <field name="name" />
                     <field name="semester" />
+                    <field name="department_name_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                     <field name="student_count" />
                 </tree>
             </field>
@@ -37,7 +38,6 @@
                             </group>
                             <group>
                                 <field name="semester" />
-                                <!-- <field name="color" widget="color_picker"/> -->
                             </group>
                         </group>
                         <notebook>

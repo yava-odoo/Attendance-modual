@@ -9,12 +9,12 @@ class SubjectInfo(models.Model):
 
     name = fields.Char(required = True)
     semester = fields.Integer("Semester")
-    faculty_ids = fields.Many2many("attendance.faculty" ,string="Faculty",tracking=True)
+    faculty_ids = fields.One2many("attendance.faculty" ,'subject_id',string="Faculty",tracking=True)
     department_name_ids = fields.Many2many("attendance.department" ,string="Department",tracking=True)
     active = fields.Boolean(default=True)
     color = fields.Integer(string='Color Index')
     student_ids = fields.One2many('attendance.student','subject_id',string='Student')
-    student_count = fields.Integer(compute = "_student_count" ,string="Student Count")
+    student_count = fields.Integer(compute = "_student_count" ,string="Student Count")      
 
 
     def get_student(self):

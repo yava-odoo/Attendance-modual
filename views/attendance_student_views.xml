@@ -15,7 +15,7 @@
                 </tree>
             </field>
         </record>
-
+        
         <record id="attendance_student_form_view" model="ir.ui.view">
             <field name="name">attendance_form_view</field>
             <field name="model">attendance.student</field>
@@ -24,7 +24,7 @@
                     <header>
                         <field name="state" widget="statusbar" options="{'clickable':'0'}"></field>
                         <button name="done_action" type="object"
-                            string="Done" />
+                            string="Done" states="pending"/>
                         <button name="%(attendance_subject_action)d" type="action"
                             string="Subjects" />
                         <button name="%(attendance_faculty_action)d" type="action"
@@ -47,8 +47,8 @@
                                 <field name="semester" />
                             </group>
                             <group>
-                                <field name="date" />
-                                <field name="subject_id" options="{'no_create':True,'no_open': True}"/>
+                                    <field name="date" attrs="{'readonly':[('state','=','done')]}"/>
+                                    <field name="subject_id" options="{'no_create':True,'no_open': True}" attrs="{'readonly':[('state','=','done')]}"/>
                                 <field name="faculty_id" options="{'no_create':True,'no_open': True}"/>
                                 <field name="email" widget="email" />
                             </group>
@@ -79,7 +79,9 @@
                     <field name="student_id" />
                     <field name="year" />
                     <field name="semester" />
-                    <field name="faculty_id" />
+                    <field name="faculty_id"/>
+                    <field name="course_id" string="Course"/>
+                    <field name="subject_id" />
                     <field name="department_name_id" />
                     <filter name="date" string="Current Date"
                         domain="[('date','=',datetime.datetime.now())]" />
@@ -92,9 +94,18 @@
                         <separator />
                         <filter name="department_name_id" string="Department"
                             context="{'group_by':'department_name_id'}" />
-                        <separator />
-                        <filter string="Subject" name="subject_id" context="{'group_by':'subject_id'}" />
-                    </group>
+                            <separator />
+                            <filter name="course_id" string="Course"
+                            context="{'group_by':'course_id'}" />
+                            <separator />
+                            <filter name="faculty_id" string="Facluty"
+                            context="{'group_by':'faculty_id'}" />
+                            <separator />
+                            <filter string="Subject" name="subject_id" context="{'group_by':'subject_id'}" />
+                        </group>
+                        <searchpanel>
+                            <field name="state" icon="fa-check-square-o" enable_counters="1" />
+                        </searchpanel>
                 </search>
             </field>
         </record>
