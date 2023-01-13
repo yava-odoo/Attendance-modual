@@ -20,7 +20,7 @@ class StudentInfo(models.Model):
     department_name_id = fields.Many2one("attendance.department" ,string="Department")
     state = fields.Selection(selection=[('pending','Pending'),('done','Done')],default="pending",tracking=True)
     active = fields.Boolean(default=True)
-
+    student_progress_ids = fields.Many2many('attendance.progress',string="Student Progress")
     @api.constrains('semester','year')
     def _check_year_semester(self):
         for rec in self:
@@ -32,3 +32,9 @@ class StudentInfo(models.Model):
     def done_action(self):
         for rec in self:
             rec.state = 'done'
+
+    @api.ondelete(at_uninstall = False)
+    def _delete_permission(self):
+        for rec in self:
+            if rec.state == "done":
+                raise ValidationError("You can't Remove Done Attendance")

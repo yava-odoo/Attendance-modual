@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_progress_demo_data_1" model="attendance.progress">
+            <field name="name">Good</field>
+            <field name="color">10</field>
+        </record>
+        <record id="attendance_progress_demo_data_2" model="attendance.progress">
+            <field name="name">Average</field>
+            <field name="color">3</field>
+        </record>
+        <record id="attendance_progress_demo_data_3" model="attendance.progress">
+            <field name="name">Bad</field>
+            <field name="color">9</field>
+        </record>
+    </data>
+</odoo>
+        

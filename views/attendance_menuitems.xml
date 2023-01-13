@@ -10,6 +10,7 @@
                 <menuitem id="attendance_faculty_sub_menu" action="attendance_faculty_action" />
                 <menuitem id="attendance_department_sub_menu" action="attendance_department_action" />
                 <menuitem id="attendance_course_sub_menu" action="attendance_student_course_action" />
+                <menuitem id="attendance_progress_sub_menu" action="attendance_student_progress_action" />
             </menuitem>
         </menuitem>
     </data>

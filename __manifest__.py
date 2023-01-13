@@ -15,8 +15,10 @@
         'views/attendance_department_views.xml',
         'views/attendance_student_course.xml',
         'views/attendance_subject_views.xml',
+        'views/attedance_progress_views.xml',
     ],
     'demo' : [
+        'demo/attendance_progress_demo_data.xml',
         'demo/attendance_department_demo_data.xml',
         'demo/attendance_course_demo_data.xml',
         'demo/attendance_subject_demo_data.xml',                                                                                                

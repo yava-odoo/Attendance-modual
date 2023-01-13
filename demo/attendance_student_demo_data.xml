@@ -10,6 +10,7 @@
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_2"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_2"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_1"></field>
+            <field name="student_progress_ids" eval="[(6,0,[ref('attendance.attendance_progress_demo_data_1')])]" />
         </record>
         <record id="attendance_demo_data_2" model="attendance.student">
             <field name="name">Kishan</field>
@@ -20,6 +21,7 @@
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_6"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_4"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_2"></field>
+            <field name="student_progress_ids" eval="[(6,0,[ref('attendance.attendance_progress_demo_data_1')])]" />
         </record>
         <record id="attendance_demo_data_3" model="attendance.student">
             <field name="name">Nevil</field>
@@ -30,6 +32,7 @@
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_1"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_4"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_1"></field>
+            <field name="student_progress_ids" eval="[(6,0,[ref('attendance.attendance_progress_demo_data_2')])]" />
         </record>
         <record id="attendance_demo_data_4" model="attendance.student">
             <field name="name">Rutvik</field>
@@ -40,6 +43,7 @@
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_3"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_1"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_2"></field>
+            <field name="student_progress_ids" eval="[(6,0,[ref('attendance.attendance_progress_demo_data_2')])]" />
         </record>
         <record id="attendance_demo_data_5" model="attendance.student">
             <field name="name">Brijesh</field>
@@ -50,6 +54,7 @@
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_4"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_4"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_3"></field>
+            <field name="student_progress_ids" eval="[(6,0,[ref('attendance.attendance_progress_demo_data_1')])]" />
         </record>
         <record id="attendance_demo_data_6" model="attendance.student">
             <field name="name">shivam</field>
@@ -60,6 +65,7 @@
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_6"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_1"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_4"></field>
+            <field name="student_progress_ids" eval="[(6,0,[ref('attendance.attendance_progress_demo_data_3')])]" />
         </record>
         <record id="attendance_demo_data_7" model="attendance.student">
             <field name="name">Om</field>
@@ -70,6 +76,7 @@
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_1"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_3"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_3"></field>
+            <field name="student_progress_ids" eval="[(6,0,[ref('attendance.attendance_progress_demo_data_3')])]" />
         </record>
     </data>
 </odoo>

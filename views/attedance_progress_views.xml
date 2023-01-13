@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_progress_tree_view" model="ir.ui.view">
+            <field name="name">student progress tree view</field>
+            <field name="model">attendance.progress</field>
+            <field name="arch" type="xml">
+                <tree string="Department" editable="bottom">
+                    <field name="name" />
+                    <field name="color" widget="color_picker"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
