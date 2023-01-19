@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="academic_information_form_view" model="ir.ui.view">
+            <field name="name">academic information view</field>
+            <field name="model">attendance.student</field>
+            <field name="inherit_id" ref="attendance.attendance_student_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='department']" position="after">
+                    <page string="Academic Information">
+                        <group>
+                            <group>
+                                <field name="school_name"></field>
+                                <field name="states"></field>
+                            </group>
+                            <group>
+                                <field name="city"></field>
+                                <field name="country_id" options="{'no_create':True,'no_open': True}"></field>
+                            </group>
+                        </group>
+                        <separator string="Academic Info."/>
+                        <field name="results_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="seat_no"/>
+                                <field name="cgpa"/>
+                                <field name="percentile"/>
+                                <field name="year"/>
+                                <field name="month"/>
+                                <field name="bord"/>
+                                <field name="groups"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

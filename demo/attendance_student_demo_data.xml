@@ -7,6 +7,9 @@
             <field name="email">19dcs150@chausat.edu.in</field>
             <field name="year">4</field>
             <field name="semester">7</field>
+            <field name="school_name">MNj</field>
+            <field name="states">Gujrat</field>
+            <field name="city">surat</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_2"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_2"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_1"></field>
@@ -18,6 +21,9 @@
             <field name="email">19dcs122@chausat.edu.in</field>
             <field name="year">3</field>
             <field name="semester">5</field>
+            <field name="school_name">Tapovan</field>
+            <field name="states">Gujrat</field>
+            <field name="city">Rajkot</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_6"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_4"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_2"></field>
@@ -29,6 +35,9 @@
             <field name="email">19dcs123@chausat.edu.in</field>
             <field name="year">1</field>
             <field name="semester">1</field>
+            <field name="school_name">Tapovan</field>
+            <field name="states">Gujrat</field>
+            <field name="city">Rajkot</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_1"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_4"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_1"></field>
@@ -40,6 +49,9 @@
             <field name="email">19dcs111@chausat.edu.in</field>
             <field name="year">2</field>
             <field name="semester">4</field>
+            <field name="school_name">Tapovan</field>
+            <field name="states">Gujrat</field>
+            <field name="city">Rajkot</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_3"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_1"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_2"></field>
@@ -51,6 +63,9 @@
             <field name="email">19dcs112@chausat.edu.in</field>
             <field name="year">2</field>
             <field name="semester">4</field>
+            <field name="school_name">Tapovan</field>
+            <field name="states">Gujrat</field>
+            <field name="city">Rajkot</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_4"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_4"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_3"></field>
@@ -62,6 +77,9 @@
             <field name="email">19dcs114@chausat.edu.in</field>
             <field name="year">2</field>
             <field name="semester">4</field>
+            <field name="school_name">Tapovan</field>
+            <field name="states">Gujrat</field>
+            <field name="city">Rajkot</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_6"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_1"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_4"></field>
@@ -73,6 +91,9 @@
             <field name="email">19dcs121@chausat.edu.in</field>
             <field name="year">2</field>
             <field name="semester">4</field>
+            <field name="school_name">Tapovan</field>
+            <field name="states">Gujrat</field>
+            <field name="city">Rajkot</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_1"></field>
             <field name="course_id" ref="attendance.attendance_course_demo_data_3"></field>
             <field name="department_name_id" ref="attendance.attendance_department_demo_data_3"></field>
@@ -80,4 +101,3 @@
         </record>
     </data>
 </odoo>
-        

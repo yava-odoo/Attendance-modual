@@ -16,6 +16,7 @@
         'views/attendance_student_course.xml',
         'views/attendance_subject_views.xml',
         'views/attedance_progress_views.xml',
+        'views/academic_informations.xml',
     ],
     'demo' : [
         'demo/attendance_progress_demo_data.xml',

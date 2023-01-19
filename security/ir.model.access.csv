@@ -5,3 +5,4 @@ attendance.access_attendance_faculty,access_attendance_faculty,attendance.model_
 attendance.access_attendance_subject,access_attendance_subject,attendance.model_attendance_subject,base.group_user,1,1,1,1
 attendance.access_attendance_course,access_attendance_course,attendance.model_attendance_course,base.group_user,1,1,1,1
 attendance.access_attendance_progress,access_attendance_progress,attendance.model_attendance_progress,base.group_user,1,1,1,1
+attendance.access_attendance_result,access_attendance_result,attendance.model_attendance_result,base.group_user,1,1,1,1
