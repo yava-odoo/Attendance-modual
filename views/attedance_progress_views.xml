@@ -5,10 +5,24 @@
             <field name="name">student progress tree view</field>
             <field name="model">attendance.progress</field>
             <field name="arch" type="xml">
-                <tree string="Department" editable="bottom">
+                <tree string="Department">
                     <field name="name" />
                     <field name="color" widget="color_picker"/>
                 </tree>
+            </field>
+        </record>
+        <record id="attendance_new" model="ir.ui.view"> 
+            <field name="name">new_form_view</field>
+            <field name="model">attendance.progress</field>
+            <field name="arch" type="xml">
+                <form name="department form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <field name="color" widget="color_picker"/>
+                        </group>
+                    </sheet>
+                </form>
             </field>
         </record>
     </data>

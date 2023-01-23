@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <menuitem id="attendance_root_menu" name="Attendance">
+        <menuitem id="attendance_root_menu" name="Attendance" web_icon="attendance,./static/description/image.jpg">
             <menuitem id="attendance_student_root_menu" name="Student">
                 <menuitem id="attendance_student_sub_menu" action="attendance_student_action" />
             </menuitem>

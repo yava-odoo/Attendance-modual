@@ -8,9 +8,10 @@ class FaclutyInfo(models.Model):
     _inherit = ["mail.thread","mail.activity.mixin"]
 
     name = fields.Char(required = True)
-    email = fields.Char("Email")
+    email = fields.Char("Email")    
     subject_id = fields.Many2one('attendance.subject',string="Subject",tracking=True)
     department_name_id = fields.Many2one("attendance.department" ,string="Department",tracking=True)
     active = fields.Boolean(default=True)
     course_ids = fields.Many2many("attendance.course", string="Course")
     student_ids = fields.One2many('attendance.student','faculty_id',string="Students")
+    image = fields.Binary()

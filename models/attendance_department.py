@@ -25,4 +25,5 @@ class DepartmentInfo(models.Model):
             'res_model': 'attendance.student',
             'domain': [('department_name_id', '=', self.id)],
         }
+        
 

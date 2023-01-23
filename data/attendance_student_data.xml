@@ -4,7 +4,7 @@
         <record id="attendance_student_action" model="ir.actions.act_window">
             <field name="name">Attendance</field>
             <field name="res_model">attendance.student</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
             <field name="context">{'search_default_date': True}</field>
         </record>
         <record id="attendance_subject_action" model="ir.actions.act_window">
@@ -15,7 +15,7 @@
         <record id="attendance_faculty_action" model="ir.actions.act_window">
             <field name="name">Faculty</field>
             <field name="res_model">attendance.faculty</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
         </record>
         <record id="attendance_department_action" model="ir.actions.act_window">
             <field name="name">Department</field>
