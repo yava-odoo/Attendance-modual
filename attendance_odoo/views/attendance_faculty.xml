@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_odoo_new" model="ir.ui.view"> 
+            <field name="name">attendance.odoo.new</field>
+            <field name="model">attendance.faculty</field>
+            <field name="inherit_id" ref="attendance.attendance_faculty_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//sheet[@name='faculty_attendance']" position="before">
+                    <header>
+                        <button name="submit_attendance" type="object" string="Submit"/>
+                    </header>
+                </xpath>
+                <xpath expr="//page[@name='students']" position="after">
+                    <page string="Attendance">
+                        <group>
+                            <group>
+                                <button name="time_start" type="object" string="Start"/>
+                                <field name="start_time" nolabel="1"/>
+                            </group>
+                            <group>
+                                <button name="time_end" type="object" string="End"/>
+                                <field name="end_time" nolabel="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

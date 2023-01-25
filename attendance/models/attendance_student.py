@@ -28,7 +28,7 @@ class StudentInfo(models.Model):
     student_progress_ids = fields.Many2many(
         'attendance.progress', string="Student Progress")
     image = fields.Binary()
-    
+
     @api.constrains('semester', 'year')
     def _check_year_semester(self):
         for rec in self:
@@ -47,16 +47,13 @@ class StudentInfo(models.Model):
             if rec.state == "done":
                 raise ValidationError("You can't Remove Done Attendance")
 
-    # def new_action(self):
-
-    #     for rec in self:
-    #         self.env['attendance.progress'].create({
-    #             'name' : rec.name
-    #         })
-    #     return{
-    #         'type': 'ir.actions.act_window',
-    #         'name': 'Progress',
-    #         'view_mode': 'form',
-    #         'res_model': 'attendance.progress',
-    #         'domain' : [('name','=',self.name)]
-    #     }
+    def new_action(self):
+        form_view_id = self.env['attendance.progress'].search([('name','=',self.student_progress_ids.name)]).id
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Progress',
+            'view_mode': 'form',
+            'res_model': 'attendance.progress',
+            'res_id' : form_view_id,
+            'target': 'current'
+            }

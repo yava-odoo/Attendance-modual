@@ -19,7 +19,7 @@
             <field name="model">attendance.faculty</field>
             <field name="arch" type="xml">
                 <form>
-                    <sheet>
+                    <sheet name="faculty_attendance">
                         <field name="image" widget="image" class="oe_avatar" options="{'size': [100, 100]}"/>
                         <label for="name">Name</label>
                         <h1>
@@ -40,7 +40,7 @@
                                     <field name="department_name_id"></field>
                                 </group>
                             </page>
-                            <page string="Students">
+                            <page string="Students" name="students">
                                 <field name="student_ids"></field>
                             </page>
                         </notebook>

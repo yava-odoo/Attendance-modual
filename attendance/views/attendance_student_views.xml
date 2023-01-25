@@ -77,8 +77,10 @@
             <field name="arch" type="xml">
                 <kanban class="o_res_partner_kanban">
                     <field name="name"/>
+                    <field name="year"/>
                     <field name="email"/>
                     <field name="image"/>
+                    <field name="state"/>
                     <field name="course_id"/>
                     <templates>
                         <t t-name="kanban-box">
@@ -96,6 +98,9 @@
                                     </div>
                                     <div>
                                         <t t-esc="record.course_id.value"/>
+                                    </div>
+                                    <div t-if="record.state.raw_value == 'absent'">
+                                        <t t-esc="record.year.value"/>
                                     </div>
                                 </div>
                             </div>
@@ -144,4 +149,4 @@
         </record>
 
     </data>
-</odoo>
+</odoo> 

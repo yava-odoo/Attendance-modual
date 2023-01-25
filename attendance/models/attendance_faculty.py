@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields,api
+from datetime import datetime
 
 class FaclutyInfo(models.Model):
     _name = "attendance.faculty"
@@ -15,3 +16,4 @@ class FaclutyInfo(models.Model):
     course_ids = fields.Many2many("attendance.course", string="Course")
     student_ids = fields.One2many('attendance.student','faculty_id',string="Students")
     image = fields.Binary()
+   
