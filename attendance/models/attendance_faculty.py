@@ -16,4 +16,15 @@ class FaclutyInfo(models.Model):
     course_ids = fields.Many2many("attendance.course", string="Course")
     student_ids = fields.One2many('attendance.student','faculty_id',string="Students")
     image = fields.Binary()
-   
+    password = fields.Char("Password")
+
+    @api.model
+    def create(self,vals):
+            id = self.env['res.users'].search([('name','=',vals['name'])]).id
+            if not id:
+                self.env['res.users'].create({
+                    'name':vals['name'],
+                    'login': vals['email'],
+                    'password':vals['password'],
+                })
+            return super(FaclutyInfo,self).create(vals)

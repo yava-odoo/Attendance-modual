@@ -7,6 +7,7 @@
     'description': "Attendace is now easy by using this modual",
     'depends':['mail'],
     'data': [
+        'security/attendance_security.xml',
         'security/ir.model.access.csv',
         'data/attendance_student_data.xml',
         'views/attendance_menuitems.xml',
@@ -17,6 +18,7 @@
         'views/attendance_subject_views.xml',
         'views/attedance_progress_views.xml',
         'views/academic_informations.xml',
+        'report/attendance_student_report.xml'
     ],
     'demo' : [
         'demo/attendance_progress_demo_data.xml',

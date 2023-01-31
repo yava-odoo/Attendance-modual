@@ -4,54 +4,63 @@
         <record id="attendance_faculty_demo_data_1" model="attendance.faculty">
             <field name="name">Hardik</field>
             <field name="email">hardik@gamil.com</field>
+            <field name="password">123</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_1"></field>
             <field name="course_ids" eval="[(6,0,[ref('attendance.attendance_course_demo_data_1'),ref('attendance.attendance_course_demo_data_3')])]" />
         </record>
         <record id="attendance_faculty_demo_data_2" model="attendance.faculty">
             <field name="name">Priyal</field>
             <field name="email">Priyal@gamil.com</field>
+            <field name="password">123</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_2"></field>
             <field name="course_ids" eval="[(6,0,[ref('attendance.attendance_course_demo_data_3')])]" />
         </record>
         <record id="attendance_faculty_demo_data_3" model="attendance.faculty">
             <field name="name">Harshil</field>
             <field name="email">Harshil@gamil.com</field>
+            <field name="password">123</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_1"></field>
             <field name="course_ids" eval="[(6,0,[ref('attendance.attendance_course_demo_data_6')])]" />
         </record>
         <record id="attendance_faculty_demo_data_4" model="attendance.faculty">
             <field name="name">Neha</field>
             <field name="email">Neha@gamil.com</field>
+            <field name="password">123</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_4"></field>
             <field name="course_ids" eval="[(6,0,[ref('attendance.attendance_course_demo_data_4')])]" />
         </record>
         <record id="attendance_faculty_demo_data_5" model="attendance.faculty">
             <field name="name">Nilesh</field>
             <field name="email">Nilesh@gamil.com</field>
+            <field name="password">123</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_3"></field>
             <field name="course_ids" eval="[(6,0,[ref('attendance.attendance_course_demo_data_1'),ref('attendance.attendance_course_demo_data_3')])]" />
         </record>
         <record id="attendance_faculty_demo_data_6" model="attendance.faculty">
             <field name="name">Dipak</field>
             <field name="email">dipak@gamil.com</field>
+            <field name="password">123</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_5"></field>
             <field name="course_ids" eval="[(6,0,[ref('attendance.attendance_course_demo_data_5'),ref('attendance.attendance_course_demo_data_4')])]" />
         </record>
         <record id="attendance_faculty_demo_data_7" model="attendance.faculty">
             <field name="name">Naina</field>
             <field name="email">Naina@gamil.com</field>
+            <field name="password">123</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_2"></field>
             <field name="course_ids" eval="[(6,0,[ref('attendance.attendance_course_demo_data_1'),ref('attendance.attendance_course_demo_data_3')])]" />
         </record>
         <record id="attendance_faculty_demo_data_8" model="attendance.faculty">
             <field name="name">Priyanka</field>
             <field name="email">Priyanka@gamil.com</field>
+            <field name="password">123</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_6"></field>
             <field name="course_ids" eval="[(6,0,[ref('attendance.attendance_course_demo_data_4'),ref('attendance.attendance_course_demo_data_2')])]" />
         </record>
         <record id="attendance_faculty_demo_data_5" model="attendance.faculty">
             <field name="name">Panchal</field>
             <field name="email">Panchal@gamil.com</field>
+            <field name="password">123</field>
             <field name="subject_id" ref="attendance.attendance_subject_demo_data_3"></field>
             <field name="course_ids" eval="[(6,0,[ref('attendance.attendance_course_demo_data_5')])]" />
         </record>

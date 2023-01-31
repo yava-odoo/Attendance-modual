@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.module.category" id="attendance_groups">
+            <field name="name">Attendance</field>
+            <field name="description">Access levels for Attendance</field>
+        </record>
+        <record id="attendance_group_user" model="res.groups">
+            <field name="name">user</field>
+            <field name="category_id" ref="attendance_groups"/>
+        </record>
+        <record id="attendance_group_faculty" model="res.groups">
+            <field name="name">Faculty</field>
+            <field name="category_id" ref="attendance_groups"/>
+        </record>
+        <record id="attendance_group_admin" model="res.groups">
+            <field name="name">admin</field>
+            <field name="category_id" ref="attendance_groups"/>
+        </record>
+        <record id="attendance_rule_user" model="ir.rule">
+            <field name="name">attendance record rule</field>
+            <field name="model_id" ref="attendance.model_attendance_student"/>
+            <field name="groups" eval="[(4,ref('attendance.attendance_group_faculty'))]"/>
+            <field name="domain_force">[('faculty_id.name', '=', user.name)]</field>   
+        </record>
+        <record id="attendance_rule_admin" model="ir.rule">
+            <field name="name">attendance record rule</field>
+            <field name="model_id" ref="attendance.model_attendance_student"/>
+            <field name="groups" eval="[
+            Command.link(ref('attendance.attendance_group_user')),
+            Command.link(ref('attendance.attendance_group_admin')),
+            ]"/>
+        </record>
+    </data>
+</odoo>
+    

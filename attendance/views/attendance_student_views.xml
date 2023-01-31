@@ -26,10 +26,10 @@
                     <header>
                         <field name="state" widget="statusbar" options="{'clickable':'0'}"></field>
                         <button name="done_action" type="object" string="Done" states="pending"/>
-                        <button name="new_action" type="object" string="new"/>
-                        <button name="%(attendance_subject_action)d" type="action" string="Subjects" />
-                        <button name="%(attendance_faculty_action)d" type="action" string="Faculty" />
-                        <button name="%(attendance_department_action)d" type="action" string="Department" />
+                        <button name="absent_action" type="object" string="Absent" states="pending"/>
+                        <button name="attendance_subject_button" type="object" string="Subjects" />
+                        <button name="attendance_faculty_button" type="object" string="Faculty" />
+                        <button name="attendance_department_button" type="object" string="Department" />
                     </header>
                     <sheet>
                         <field name="image" widget="image" class="oe_avatar" options="{'size': [100, 100]}"/>
@@ -39,13 +39,14 @@
                         <h1>
                             <field name="name" />
                         </h1>
+                        <field name="is_readonly"/>
                         <group>
-                            <group>
+                            <group attrs="{'readonly':[('is_readonly','=',True)]}">
                                 <field name="student_progress_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                                 <field name="course_id" />
                                 <field name="student_id" />
                                 <field name="year" />
-                                <field name="semester" />
+                                <field name="semester"/>
                             </group>
                             <group>
                                 <field name="date" attrs="{'readonly':[('state','=','done')]}"/>

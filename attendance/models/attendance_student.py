@@ -10,6 +10,7 @@ class StudentInfo(models.Model):
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
     name = fields.Char("Name", required=True)
+    is_readonly = fields.Boolean('Readonly',default=False,compute ="_is_readonly")
     student_id = fields.Char("Student Id", required=True)
     email = fields.Char("Email")
     course_id = fields.Many2one("attendance.course", string="Student Course")
@@ -36,10 +37,13 @@ class StudentInfo(models.Model):
             if (temp*2) != rec.semester and (temp*2)-1 != rec.semester:
                 raise ValidationError('Enter Valid Year Or Semester')
 
-    @api.depends('state')
     def done_action(self):
         for rec in self:
             rec.state = 'done'
+
+    def absent_action(self):
+        for rec in self:
+            rec.state = 'absent'
 
     @api.ondelete(at_uninstall=False)
     def _delete_permission(self):
@@ -47,13 +51,30 @@ class StudentInfo(models.Model):
             if rec.state == "done":
                 raise ValidationError("You can't Remove Done Attendance")
 
-    def new_action(self):
-        form_view_id = self.env['attendance.progress'].search([('name','=',self.student_progress_ids.name)]).id
+    def render_form_view(self,model_name,query):
+        form_view_id = self.env[model_name].search([('name','=',query)]).id
+        print("-------------",form_view_id,model_name,query)
         return {
             'type': 'ir.actions.act_window',
             'name': 'Progress',
             'view_mode': 'form',
-            'res_model': 'attendance.progress',
+            'res_model': model_name,
             'res_id' : form_view_id,
             'target': 'current'
             }
+    def attendance_subject_button(self):
+        return self.render_form_view('attendance.subject',self.subject_id.name)
+
+    def attendance_faculty_button(self):
+        return self.render_form_view('attendance.faculty',self.faculty_id.name)
+
+    def attendance_department_button(self):
+        return self.render_form_view('attendance.department',self.department_name_id.name)
+
+    def _is_readonly(self):
+        for rec in self:
+            usr = self.env['res.users'].browse(self.env.uid)
+            if usr.has_group('attendance.attendance_group_user'):
+                rec.is_readonly = True
+            else:
+                rec.is_readonly = False
