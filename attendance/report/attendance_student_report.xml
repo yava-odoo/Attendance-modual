@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="css" href="style.css"?>
 <odoo>
     <record id="attendance_student_report" model="ir.actions.report">
         <field name="name">attendnace.student.report</field>
@@ -7,18 +8,109 @@
         <field name="report_name">attendance.student_details</field>
         <field name="report_file">attendance.student_details</field>
         <field name="print_report_name">'Student Details - %s' % (object.name)</field>
-        <field name="binding_model_id" ref="model_attendance_student"/>
+        <field name="binding_model_id" ref="model_attendance_student" />
         <field name="binding_type">report</field>
     </record>
+
+
+    <template id="attendance_student_results">
+        <table class="table">
+            <thead class="thread-lite">
+               <tr>
+                    <th>Name</th>
+                    <th>Seat No</th>
+                    <th>CGPA/% Obtained</th>
+                    <th>Percentile</th>
+                    <th>Year</th>
+                    <th>Month</th>
+                    <th>Bord/University</th>
+                    <th>Group/Specialisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-set="offers" t-value="property.mapped('results_ids')" />
+                <tr t-foreach="offers" t-as="offer">
+                    <td>
+                        <span t-field="offer.name" />
+                    </td>
+                    <td>
+                        <span t-field="offer.seat_no" />
+                    </td>
+                    <td>
+                        <span t-field="offer.cgpa" />
+                    </td>
+                    <td>
+                        <span t-field="offer.percentile" />
+                    </td>
+                    <td>
+                        <span t-field="offer.year" />
+                    </td>
+                    <td>
+                        <span t-field="offer.month" />
+                    </td>
+                    <td>
+                        <span t-field="offer.bord" />
+                    </td>
+                    <td>
+                        <span t-field="offer.groups" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
 
     <template id="student_details">
         <t t-call="web.html_container">
             <t t-call="web.external_layout">
                 <div class="page">
-                    
+                    <div class="mt-5">
+                        <t t-foreach="docs" t-as="attendance">
+                            <div id="attendance_student_image">
+                                <style>
+                                    #attendance_student_image {
+                                    position: absolute;
+                                    right: 100px;
+                                    top: 50px;
+                                    width: 100px;
+                                    height: 100px;
+                                    }
+                                </style>
+                                <img t-attf-src="data:image/jpeg;base64,#{attendance.image}"
+                                    alt="Not Found" height="200" width="200" />
+                            </div>
+                            <h1>
+                                <span t-field="attendance.name" />
+                            </h1>
+                            <div>
+                                <div>
+                                    <strong>Student Progress: </strong>
+                                    <span t-field="attendance.student_progress_ids"/>
+                                </div>
+                                <div>
+                                    <strong>Student Course: </strong>
+                                    <span t-field="attendance.course_id" />
+                                </div>
+                                <div>
+                                    <strong>Student Id: </strong>
+                                    <span t-field="attendance.student_id" />
+                                </div>
+                                <div>
+                                    <strong>Year: </strong>
+                                    <span t-field="attendance.year" />
+                                </div>
+                                <div>
+                                    <strong>Semester: </strong>
+                                    <span t-field="attendance.semester" />
+                                </div>
+                            </div>
+                            <t t-call="attendance.attendance_student_results">
+                                <t t-set="property" t-value="attendance"/>
+                                </t>
+                        </t>
+                    </div>
                 </div>
             </t>
         </t>
-
     </template>
+
 </odoo>
